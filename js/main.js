@@ -29,3 +29,7 @@ function showImgs() {
         displayImgs(imgUrls);
     }
 }
+var get_width = function(){
+  $("#search").width();
+  console.log($("#search").width());
+}
