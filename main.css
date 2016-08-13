@@ -2,6 +2,7 @@
   display:block;
   margin-left:auto;
   margin-right:auto;
+  padding-bottom: 10px;
 }
 .body{
 margin-top: 15%;
@@ -11,5 +12,7 @@ margin-top: 15%;
 
 }
 input.text{
-  width: 80%;
+
+  width: 30%;
+  height:3%;
 }
