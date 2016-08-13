@@ -1,3 +1,10 @@
 div.searchbar{
   display:inline-block;
 }
+p {
+    display: block;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
