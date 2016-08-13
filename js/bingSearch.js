@@ -1,4 +1,5 @@
-var authId = btoa(':7oc2w5VV/beWzXSDzhB3dpk6CDHSH7lD/5z82UH84Us:');
+var searchId = btoa(':7oc2w5VV/beWzXSDzhB3dpk6CDHSH7lD/5z82UH84Us:');
+var suggestId = btoa(':0e80b565052844069bdfe21798661438:');
 
 function getSiteData(searchTerm, index) {
   $.ajax({
@@ -6,7 +7,7 @@ function getSiteData(searchTerm, index) {
       url: 'https://api.datamarket.azure.com/Bing/Search/v1/Web?Query=%27'+searchTerm+'%27&$skip='+index,
       dataType: 'json',
       headers: {
-        'Authorization': 'Basic ' + authId
+        'Authorization': 'Basic ' + searchId
       },
       success: function(data) {
           var results = data.d.results;
@@ -15,8 +16,7 @@ function getSiteData(searchTerm, index) {
             for (var i = 0; i < results.length; i++) {
                 var result = results[i];
                 if(result.Title !== '') {
-                    var div = "<div><h3><a href='"+result.Url+"'>"+result.Title+"</a></h3><p>"+result.DisplayUrl+"</p><p>"+result.Description+"</p></div>";
-                    resultsHTML += div;
+                    resultsHTML += "<div><h3><a href='"+result.Url+"'>"+result.Title+"</a></h3><p>"+result.DisplayUrl+"</p><p>"+result.Description+"</p></div>";;
                 }
             }
             $('#results').html(resultsHTML);
@@ -31,6 +31,29 @@ function getSiteData(searchTerm, index) {
                   }
               }
           }
+      },
+      failure: function(err) {
+          console.error(err);
+      }
+  });
+}
+
+function getSearchSuggestions(searchTerm) {
+  $.ajax({
+      method: 'post',
+      url: 'http://api.bing.com/osjson.aspx?query='+searchTerm,
+      dataType: 'json',
+      headers: {
+        'Authorization': 'Basic ' + suggestId
+      },
+      success: function(data) {
+          var resultsHTML = '';
+          var results = data[1];
+          for (var i = 0; i < results.length; i++) {
+              resultsHTML += "<div><h3>"+results[i]+"</h3></div>";
+              console.log(resultsHTML);
+          }
+          $('#suggestions').html(resultsHTML);
       },
       failure: function(err) {
           console.error(err);

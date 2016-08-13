@@ -5,7 +5,8 @@ var suggest = function(el){
   if (event.keyCode == 13) {
       search();
   } else {
-    SEARCH_TEXT = el.value;
+      SEARCH_TEXT = el.value;
+      getSearchSuggestions(SEARCH_TEXT);
   }
 };
 
