@@ -1,4 +1,5 @@
 var currentSearchTerm = '';
+var currentImgUrls = [];
 
 function setupClarifai() {
     Clarifai.initialize({
@@ -23,13 +24,13 @@ function handleResponse(response){
             imgUrls.push(response.results[i].url);
         }
     }
-    displayImgs(imgUrls);
+    currentImgUrls = imgUrls;
 };
 
 function handleError(err){
     console.log(err);
 };
 
-function displayImgs(imgUrls) {
-    console.log(imgUrls);
-};
+function getCurrentImgUrls() {
+  return currentImgUrls;
+}

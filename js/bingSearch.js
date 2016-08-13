@@ -20,6 +20,7 @@ function getSiteData(searchTerm, index) {
                 }
             }
             $('#results').html(resultsHTML);
+            getImgData(searchTerm, 10000);
           } else {
               if(index == 0) {
                   getSiteData(searchTerm, getRandomInt(1, 100));
@@ -85,7 +86,7 @@ function getSearchSuggestions(searchTerm) {
       success: function(data) {
           var resultsHTML = '';
           var results = data[1];
-          for (var i = 0; i < results.length; i++) {
+          for (var i = 0; i < results.length && i < 5; i++) {
               var suggestion = results[i];
               if (!suggestion.includes(' ')) {
                   resultsHTML += "<div><button onclick=useSuggestion(\'"+suggestion+"\')>"+results[i]+"</button></div>";
@@ -98,6 +99,16 @@ function getSearchSuggestions(searchTerm) {
       }
   });
 }
+
+function displayImgs() {
+    // var resultsHTML = '';
+    // imgsUrls = getCurrentImgUrls();
+    // for (var i = 0; i < imgsUrls.length; i++) {
+    //     resultsHTML += "<img style='float: left' src="+imgsUrls[i]+">";
+    // }
+    // $('#imgResults').html(resultsHTML);
+    console.log(imgUrls);
+};
 
 function useSuggestion(text) {
     document.getElementById("search").value = text;
