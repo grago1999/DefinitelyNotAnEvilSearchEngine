@@ -9,10 +9,14 @@
       var searchTerm = location.search.split('search=')[1];
       getSiteData(searchTerm, 5000);
     </script>
-    <form id="search" class="Search">
+    <div class="SearchBar">
+      <a href=index.html>
+    <img class="giggle" src="img\Gtransparent.png" style=" max-width: 100px; height: auto;">
+  </a>
       <input class="Stext" type="text" placeholder="Giggle Search" onkeyup="suggest(this)">
       <input class="subbutton" type="button" value="Search" onclick="search()">
-    </form>
+
+    </div>
     <div id="results"></div>
   </body>
 </html>
