@@ -1,14 +1,13 @@
 <html>
 <head>
   <script src="js/main.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-  <script src="js/app.js"></script>
+
 </head>
 <body>
-  <img src="img/Gtransparent.png">
+<img src="img/Gtransparent.png">
 <form id="search">
-  <input type="text" placeholder="Giggle Search">
-  <input type="submit" value="Search" ng-click="search()">
+  <input type="text" placeholder="Giggle Search" onkeyup="suggest(this.value)">
+  <input type="submit" value="Search" onclick='search()'>
 </form>
 
 
