@@ -17,6 +17,8 @@ input.text{
   width:35%;
   font-size:16px;
   font-family:Raleway;
+  border: solid 3px;
+  border-color: black;
 
 }
 button{
@@ -28,9 +30,11 @@ button{
 button.svg{
   background-color: 	#FFD8B0;
   border:	#FFD8B0;
-  transform: translate(-4px, 7px);
+  transform: translate(-6px, 6px);
   height:40px;
   width:40px;
+  border: solid 3px;
+  border-color: black;
 
 }
  button img{
@@ -38,7 +42,7 @@ button.svg{
  }
 div#suggestions{
   width:
-  border: solid 1px gray;
+  border: solid 3px gray;
   transform: translate(-101.5%,9px);
   position:absolute;
 
