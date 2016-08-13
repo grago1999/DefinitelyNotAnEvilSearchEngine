@@ -101,12 +101,11 @@ function getSearchSuggestions(searchTerm) {
 }
 
 function displayImgs(imgsUrls) {
-  console.log(imgsUrls);
-    // var resultsHTML = '';
-    // for (var i = 0; i < imgsUrls.length; i++) {
-    //     resultsHTML += "<img style='float: left' src="+imgsUrls[i]+">";
-    // }
-    // $('#imgResults').html(resultsHTML);
+    var resultsHTML = '';
+    for (var i = 0; i < imgsUrls.length; i++) {
+        resultsHTML += "<img class='searchImg' src="+imgsUrls[i]+">";
+    }
+    $('#imgResults').html(resultsHTML);
 };
 
 function useSuggestion(text) {

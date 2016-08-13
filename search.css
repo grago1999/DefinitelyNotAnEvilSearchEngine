@@ -38,3 +38,22 @@ div#suggestions{
 .nav {
   margin-left: 100px;
 }
+
+#imgResults {
+    margin-top: 15px;
+    margin-left: 100px;
+    max-width: 80%;
+}
+
+.searchImg {
+    float: left;
+    max-width: 20%;
+}
+
+div#suggestions{
+  width:
+  border: solid 1px gray;
+  transform: translate(-101.5%,9px);
+  position:absolute;
+
+}
