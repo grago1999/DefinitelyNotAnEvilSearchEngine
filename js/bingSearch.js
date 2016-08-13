@@ -1,4 +1,4 @@
-var authId = btoa(':7oc2w5VV/beWzXSDzhB3dpk6CDHSH7lD/5z82UH84Us:';
+var authId = btoa(':7oc2w5VV/beWzXSDzhB3dpk6CDHSH7lD/5z82UH84Us:');
 
 function getSiteData(searchTerm, index) {
   $.ajax({
@@ -6,7 +6,7 @@ function getSiteData(searchTerm, index) {
       url: 'https://api.datamarket.azure.com/Bing/Search/v1/Web?Query=%27'+searchTerm+'%27&$skip='+index,
       dataType: 'json',
       headers: {
-        'Authorization': 'Basic ' + authId)
+        'Authorization': 'Basic ' + authId
       },
       success: function(data) {
           var results = data.d.results;
@@ -19,10 +19,14 @@ function getSiteData(searchTerm, index) {
             }
             $('#results').html(resultsHTML);
           } else {
-            if (index == 1000) {
-              getSiteData(searchTerm, index-100);
+            if(index == 0) {
+              getSiteData(searchTerm, getRandomInt(1, 100));
             } else {
-              getSiteData(searchTerm, index-1000);
+              if (index == 1000) {
+                getSiteData(searchTerm, index-100);
+              } else {
+                getSiteData(searchTerm, index-1000);
+              }
             }
           }
       },
@@ -30,4 +34,8 @@ function getSiteData(searchTerm, index) {
           console.error(err);
       }
   });
+}
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }

@@ -6,8 +6,8 @@
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/bingSearch.js"></script>
     <script type="text/javascript">
-    console.log(SEARCH_TEXT);
-      //  getSiteData(SEARCH_TEXT, 5000);
+      var searchTerm = location.search.split('search=')[1];
+      getSiteData(searchTerm, 5000);
     </script>
     <div id="results"></div>
   </body>
