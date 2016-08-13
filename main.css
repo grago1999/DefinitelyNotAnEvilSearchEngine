@@ -10,7 +10,7 @@ margin-top: 15%;
 .searchbar{
   text-align:center;
   font-family:Raleway;
-
+  position:relative;
 }
 input.text{
   height:40px;
@@ -37,8 +37,9 @@ button.svg{
    transform:translateX(0px);
  }
 div#suggestions{
-  width:35%;
+  width: 
   border: solid 1px gray;
-  margin-left:31.3%;
+  transform: translate(-101.5%,9px);
+  position:absolute;
 
 }
