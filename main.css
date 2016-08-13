@@ -21,7 +21,7 @@ input.text{
 }
 button{
   background-color:white;
-  border:solid;
+  border:none;
   margin-top:3px;
   font-size:16px;
 }
