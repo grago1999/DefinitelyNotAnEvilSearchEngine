@@ -83,8 +83,6 @@ div#suggestions{
 }
 
 .webResult {
-    border: 3px solid;
-    border-color: gray;
     padding: 10px;
     padding-top: 0px;
     max-width: 60%;
