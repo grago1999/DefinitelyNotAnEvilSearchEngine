@@ -52,10 +52,11 @@ function getImgData(searchTerm, index) {
           if (results.length > 8) {
               var imgUrls = [];
               for (var i = 0; i < results.length && i < 40; i++) {
-                  if(results[i].FileSize < 10485759) {
+                  if(results[i].FileSize < 10485759 && !results[i].MediaUrl.includes('.gif')) {
                       imgUrls.push(results[i].MediaUrl);
                   }
               }
+              console.log(imgUrls);
               getImgTags(imgUrls, searchTerm);
           } else {
               if (index == 0) {
