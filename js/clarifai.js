@@ -22,9 +22,7 @@ function handleResponse(response){
         if (imgResult.tag.classes.indexOf(currentSearchTerm) == -1) {
             imgUrls.push(response.results[i].url);
         }
-        console.log(i);
     }
-    console.log('a');
     displayImgs(imgUrls);
 };
 

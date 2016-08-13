@@ -50,8 +50,10 @@ function getImgData(searchTerm, index) {
           var results = data.d.results;
           if (results.length > 8) {
               var imgUrls = [];
-              for (var i = 0; i < results.length && i < 10; i++) {
-                  imgUrls.push(results[i].MediaUrl);
+              for (var i = 0; i < results.length && i < 40; i++) {
+                  if(results[i].FileSize < 10485759) {
+                      imgUrls.push(results[i].MediaUrl);
+                  }
               }
               getImgTags(imgUrls, searchTerm);
           } else {
