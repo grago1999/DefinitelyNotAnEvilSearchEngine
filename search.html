@@ -6,7 +6,11 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/bingSearch.js"></script>
+    <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-1.2.1.js"></script>
+    <script src="js/clarifai.js"></script>
     <script type="text/javascript">
+      showWeb()
+      setupClarifai();
       var searchTerm = location.search.split('search=')[1];
       getSiteData(searchTerm, 5000);
     </script>
@@ -19,8 +23,8 @@
       <div id="suggestions"></div>
     </div>
     <div class="nav">
-      <button>Web</button>
-      <button>Images</button>
+      <button onclick="showWeb()">Web</button>
+      <button onclick="showImgs()">Images</button>
     </div>
     <div id="results"></div>
     <div id="imgResults"></div>

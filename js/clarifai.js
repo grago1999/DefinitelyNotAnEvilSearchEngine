@@ -1,5 +1,5 @@
 var currentSearchTerm = '';
-var currentImgUrls = [];
+var currentImgUrls = '';
 
 function setupClarifai() {
     Clarifai.initialize({
@@ -20,11 +20,12 @@ function handleResponse(response){
     var imgUrls = [];
     for (var i = 0; i < response.results.length; i++) {
         var imgResult = response.results[i].result
-        if (imgResult.tag.classes.indexOf(currentSearchTerm) == -1) {
+        if (!imgResult.error && imgResult.tag.classes.indexOf(currentSearchTerm) == -1) {
             imgUrls.push(response.results[i].url);
         }
     }
     currentImgUrls = imgUrls;
+    displayImgs(imgUrls);
 };
 
 function handleError(err){
@@ -32,5 +33,5 @@ function handleError(err){
 };
 
 function getCurrentImgUrls() {
-  return currentImgUrls;
-}
+    return currentImgUrls;
+};

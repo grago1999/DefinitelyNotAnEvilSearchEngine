@@ -100,14 +100,13 @@ function getSearchSuggestions(searchTerm) {
   });
 }
 
-function displayImgs() {
+function displayImgs(imgsUrls) {
+  console.log(imgsUrls);
     // var resultsHTML = '';
-    // imgsUrls = getCurrentImgUrls();
     // for (var i = 0; i < imgsUrls.length; i++) {
     //     resultsHTML += "<img style='float: left' src="+imgsUrls[i]+">";
     // }
     // $('#imgResults').html(resultsHTML);
-    console.log(imgUrls);
 };
 
 function useSuggestion(text) {
