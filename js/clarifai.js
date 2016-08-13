@@ -23,6 +23,7 @@ function handleResponse(response){
         for (var j = 0; j < imgResult.tag.classes.length; j++) {
             var currentClass = imgResult.tag.classes[j];
             if (currentClass == currentSearchTerm) {
+              console.log(currentClass);
                 canUseImg = false;
                 break;
             }
