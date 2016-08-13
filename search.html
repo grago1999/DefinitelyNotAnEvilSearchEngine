@@ -9,6 +9,10 @@
       var searchTerm = location.search.split('search=')[1];
       getSiteData(searchTerm, 5000);
     </script>
+    <form id="search" class="Search">
+      <input class="Stext" type="text" placeholder="Giggle Search" onkeyup="suggest(this.value)">
+      <input class="subbutton" type="button" value="Search" onclick="search()">
+    </form>
     <div id="results"></div>
   </body>
 </html>

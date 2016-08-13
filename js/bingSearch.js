@@ -14,20 +14,22 @@ function getSiteData(searchTerm, index) {
             var resultsHTML = '';
             for (var i = 0; i < results.length; i++) {
                 var result = results[i];
-                var div = '<div>'+result.Title+' '+result.Url+'</div>';
-                resultsHTML += div;
+                if(result.Title !== '') {
+                    var div = "<div><h3><a href='"+result.Url+"'>"+result.Title+"</a></h3><p>"+result.DisplayUrl+"</p><p>"+result.Description+"</p></div>";
+                    resultsHTML += div;
+                }
             }
             $('#results').html(resultsHTML);
           } else {
-            if(index == 0) {
-              getSiteData(searchTerm, getRandomInt(1, 100));
-            } else {
-              if (index == 1000) {
-                getSiteData(searchTerm, index-100);
+              if(index == 0) {
+                  getSiteData(searchTerm, getRandomInt(1, 100));
               } else {
-                getSiteData(searchTerm, index-1000);
+                  if (index == 100) {
+                      getSiteData(searchTerm, index-100);
+                  } else {
+                      getSiteData(searchTerm, index-1000);
+                  }
               }
-            }
           }
       },
       failure: function(err) {
