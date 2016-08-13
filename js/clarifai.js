@@ -10,7 +10,7 @@ function setupClarifai() {
 
 function getImgTags(imgUrls, searchTerm) {
     currentSearchTerm = searchTerm;
-    Clarifai.getTagsByUrl(imgUrls[0]).then(
+    Clarifai.getTagsByUrl(imgUrls).then(
         handleResponse,
         handleError
     );

@@ -51,11 +51,10 @@ div#suggestions{
 
 .searchImg {
     float: left;
-    max-width: 20%;
+    max-width: 30%;
 }
 
 div#suggestions{
-  width:
   border: solid 1px gray;
   transform: translate(-101.5%,9px);
   position:absolute;
