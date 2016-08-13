@@ -10,9 +10,15 @@ margin-top: 15%;
 .searchbar{
   text-align:center;
 
+
 }
 input.text{
+  height:24px;
+  width:30%;
 
-  width: 30%;
-  height:3%;
+}
+button{
+  background-color: white;
+  border:black;
+  transform: translateY(8px);
 }
