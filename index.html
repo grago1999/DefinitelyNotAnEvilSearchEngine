@@ -1,9 +1,15 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="js/jquery.js"></script>
   <script src="js/main.js"></script>
   <script src="js/bingSearch.js"></script>
-  <script src="js/jquery.js"></script>
+  <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-1.2.1.js"></script>
+  <script src="js/clarifai.js"></script>
+  <script>
+      setupClarifai();
+      getImgData('cat', 5000);
+  </script>
 </head>
 <body>
 <div class="body">

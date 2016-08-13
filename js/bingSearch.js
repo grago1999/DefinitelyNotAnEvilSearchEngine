@@ -38,6 +38,36 @@ function getSiteData(searchTerm, index) {
   });
 }
 
+function getImgData(searchTerm, index) {
+  $.ajax({
+      method: 'post',
+      url: 'https://api.datamarket.azure.com/Bing/Search/v1/Image?Query=%27'+searchTerm+'%27&$skip='+index,
+      dataType: 'json',
+      headers: {
+        'Authorization': 'Basic ' + searchId
+      },
+      success: function(data) {
+          var results = data.d.results;
+          if (results.length > 8) {
+              
+          } else {
+              if (index == 0) {
+                  getImgData(searchTerm, getRandomInt(1, 100));
+              } else {
+                  if (index == 100) {
+                      getImgData(searchTerm, index-100);
+                  } else {
+                      getImgData(searchTerm, index-1000);
+                  }
+              }
+          }
+      },
+      failure: function(err) {
+          console.error(err);
+      }
+  });
+}
+
 function getSearchSuggestions(searchTerm) {
   $.ajax({
       method: 'post',
