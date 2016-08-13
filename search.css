@@ -24,6 +24,7 @@ input{
   width:285px;
   font-size:16px;
   font-family:Raleway;
+  font-weight: bold;
   transform: translateY(-13px);
   text-align: left;
   border: solid 3px;
@@ -69,4 +70,37 @@ div#suggestions{
 .topLogo {
     color: #FFFFFF;
     text-decoration: none;
+}
+
+.showWeb, .showImgs {
+    border: 3px solid;
+    border-color: black;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.webResult {
+    border: 3px solid;
+    border-color: gray;
+    padding: 10px;
+    padding-top: 0px;
+    max-width: 60%;
+}
+
+.webLink {
+  text-decoration: none;
+  color: #3385ff;
+}
+
+.closeIn {
+  margin: 0px;
+  padding: 0px;
+  -webkit-margin-after: 0;
+}
+
+.outLink {
+  color: #196619;
 }

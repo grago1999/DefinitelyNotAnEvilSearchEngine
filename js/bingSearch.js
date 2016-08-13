@@ -16,7 +16,7 @@ function getSiteData(searchTerm, index) {
             for (var i = 0; i < results.length; i++) {
                 var result = results[i];
                 if(result.Title !== '') {
-                    resultsHTML += "<div><h3 style= '-webkit-margin-start: 100px; -webkit-margin-before: 0.5em; -webkit-margin-after: 0.5em;'><a href='"+result.Url+"'>"+result.Title+"</a></h3><p style= '-webkit-margin-start: 100px; -webkit-margin-before: 0em; -webkit-margin-after: 0em;'>"+result.DisplayUrl+"</p><p style= '-webkit-margin-start: 100px; -webkit-margin-before: 0em; -webkit-margin-after: 0em;'>"+result.Description+"</p></div>";
+                    resultsHTML += "<div class='webResult' style= '-webkit-margin-start: 100px; -webkit-margin-before: 0.5em; -webkit-margin-after: 0.5em;'><h3><a href='"+result.Url+"' class='webLink closeIn'>"+result.Title+"</a></h3><p class='closeIn outLink'>"+result.DisplayUrl+"</p><p>"+result.Description+"</p></div>";
                 }
             }
             $('#results').html(resultsHTML);
