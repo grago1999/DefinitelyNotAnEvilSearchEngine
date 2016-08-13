@@ -5,11 +5,8 @@ function setupClarifai() {
     });
 }
 
-function getImgTags() {
-  Clarifai.getTagsByUrl([
-    'https://samples.clarifai.com/wedding.jpg',
-    'https://samples.clarifai.com/cookies.jpeg'
-    ]).then(
+function getImgTags(imgUrls) {
+  Clarifai.getTagsByUrl(imgUrls).then(
         handleResponse,
         handleError
     );

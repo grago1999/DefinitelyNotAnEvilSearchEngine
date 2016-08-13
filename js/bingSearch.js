@@ -49,7 +49,10 @@ function getImgData(searchTerm, index) {
       success: function(data) {
           var results = data.d.results;
           if (results.length > 8) {
-              
+              // getImgTags()
+              //var imgUrls = [];
+              // for (var i = 0; i < results.length; i++) {
+              // }
           } else {
               if (index == 0) {
                   getImgData(searchTerm, getRandomInt(1, 100));
