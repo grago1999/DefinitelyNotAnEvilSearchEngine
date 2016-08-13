@@ -12,6 +12,8 @@ button.svg{
   transform: translate(-4px, -6px);
   height:30px;
   width:30px;
+  border: solid 3px;
+  border-color: black;
 
 }
 button img{
@@ -24,6 +26,8 @@ input{
   font-family:Raleway;
   transform: translateY(-13px);
   text-align: left;
+  border: solid 3px;
+  border-color: black;
 
 }
 div#suggestions{
