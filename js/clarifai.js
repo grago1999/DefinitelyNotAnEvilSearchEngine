@@ -1,3 +1,5 @@
+var currentImgResults = [];
+
 function setupClarifai() {
     Clarifai.initialize({
         'clientId': '6Zft-9_A4IiRuEpbfX-8-1V-egHAqvAASUhiB3et',
@@ -5,7 +7,8 @@ function setupClarifai() {
     });
 }
 
-function getImgTags(imgUrls) {
+function getImgTags(imgUrls, imgResults) {
+  currentImgResults = imgResults;
   Clarifai.getTagsByUrl(imgUrls).then(
         handleResponse,
         handleError
@@ -14,9 +17,10 @@ function getImgTags(imgUrls) {
 
 function handleResponse(response){
     for (var i = 0; i < response.results.length; i++) {
-        var imgResults = response.results[i].result.tag;
-        for (var j = 0; j < imgResults.classes.length; j++) {
+        var imgResult = response.results[i].result
+        for (var j = 0; j < imgResult.tag.classes.length; j++) {
             var currentClass = imgResults.classes[j];
+
         }
     }
 };
