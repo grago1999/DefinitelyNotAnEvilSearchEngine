@@ -1,8 +1,12 @@
 
 var SEARCH_TEXT;
 
-var suggest = function(current_text){
-  SEARCH_TEXT = current_text;
+var suggest = function(el){
+  if (event.keyCode == 13) {
+      search();
+  } else {
+    SEARCH_TEXT = el.value;
+  }
 };
 
 var search = function(){
