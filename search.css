@@ -32,9 +32,8 @@ input{
 
 }
 div#suggestions{
-  width:285px;
-  border: solid 1px gray;
-  transform: translate(-292px, 100px);
+  width:280px;
+  border: solid 2px black;
   background-color:white;
   text-align: left;
 

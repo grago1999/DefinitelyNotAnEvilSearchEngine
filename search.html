@@ -21,6 +21,9 @@
       <input class="Stext" type="text" placeholder="Giggle Search" onkeyup="suggest(this)">
       <button class="svg" onclick="search()"><img src="img/search.svg"</button>
       <div id="suggestions"></div>
+      <script>
+        $("#suggestions").css({ left: '2px', top: '20px' });
+      </script>
     </div>
     <div class="nav">
       <button class="showWeb" onclick="showWeb()">Web</button>
