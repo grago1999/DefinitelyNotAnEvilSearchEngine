@@ -50,8 +50,10 @@ function getSearchSuggestions(searchTerm) {
           var resultsHTML = '';
           var results = data[1];
           for (var i = 0; i < results.length; i++) {
-              var id = 'suggestion'+i;
-              resultsHTML += "<div><button id=''"+id+"' onclick='useSuggestion("+id+")'>"+results[i]+"</button></div>";
+              var suggestion = results[i];
+              if (!suggestion.includes(' ')) {
+                  resultsHTML += "<div><button onclick=useSuggestion(\'"+suggestion+"\')>"+results[i]+"</button></div>";
+              }
           }
           $('#suggestions').html(resultsHTML);
       },
@@ -61,8 +63,8 @@ function getSearchSuggestions(searchTerm) {
   });
 }
 
-function useSuggestion(el) {
-  var elem = document.getElementById("myButton1");
+function useSuggestion(text) {
+    document.getElementById("search").value = text;
 }
 
 function getRandomInt(min, max) {
