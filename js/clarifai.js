@@ -3,14 +3,14 @@ var currentImgUrls = '';
 
 function setupClarifai() {
     Clarifai.initialize({
-        'clientId': '6Zft-9_A4IiRuEpbfX-8-1V-egHAqvAASUhiB3et',
-        'clientSecret': '3pBTJ-olpw3gvJXw1rVRZvh84QllYkVaUFFwuPw0'
+        'clientId': 'OlhzAHUNfnalKVUMnnysT6QiNPl_FL8IoD4uUvhE',
+        'clientSecret': 'x1hUmXuDgesxrdp_nUtGhkR4I_J42OIMRMrrQxTt'
     });
 };
 
 function getImgTags(imgUrls, searchTerm) {
     currentSearchTerm = searchTerm;
-    Clarifai.getTagsByUrl(imgUrls).then(
+    Clarifai.getTagsByUrl(imgUrls[0]).then(
         handleResponse,
         handleError
     );

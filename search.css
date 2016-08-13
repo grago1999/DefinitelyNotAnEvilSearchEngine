@@ -9,9 +9,9 @@ button{
 button.svg{
   background-color: 	#FFD8B0;
   border:	#FFD8B0;
-  transform: translate(-4px, -6px);
-  height:30px;
-  width:30px;
+  transform: translate(-6px, -7px);
+  height:36px;
+  width:36px;
   border: solid 3px;
   border-color: black;
 
@@ -20,7 +20,7 @@ button img{
   transform: translateX(-3px);
 }
 input{
-  height:30px;
+  height:36px;
   width:285px;
   font-size:16px;
   font-family:Raleway;
@@ -33,7 +33,7 @@ input{
 div#suggestions{
   width:285px;
   border: solid 1px gray;
-  transform: translateX(-292px);
+  transform: translate(-292px, 100px);
   background-color:white;
   text-align: left;
 
@@ -60,4 +60,13 @@ div#suggestions{
   transform: translate(-101.5%,9px);
   position:absolute;
 
+}
+
+.giggle {
+  transform: translateY(2px);
+}
+
+.topLogo {
+    color: #FFFFFF;
+    text-decoration: none;
 }
