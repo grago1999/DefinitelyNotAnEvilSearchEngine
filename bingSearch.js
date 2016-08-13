@@ -1,10 +1,12 @@
+var authId = btoa(':7oc2w5VV/beWzXSDzhB3dpk6CDHSH7lD/5z82UH84Us:';
+
 function getSiteData(searchTerm, index) {
   $.ajax({
       method: 'post',
       url: 'https://api.datamarket.azure.com/Bing/Search/v1/Web?Query=%27'+searchTerm+'%27&$skip='+index,
       dataType: 'json',
       headers: {
-        'Authorization': 'Basic ' + btoa(':7oc2w5VV/beWzXSDzhB3dpk6CDHSH7lD/5z82UH84Us:')
+        'Authorization': 'Basic ' + authId)
       },
       success: function(data) {
           var results = data.d.results;
