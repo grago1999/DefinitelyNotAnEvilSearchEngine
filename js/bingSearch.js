@@ -50,10 +50,10 @@ function getImgData(searchTerm, index) {
           var results = data.d.results;
           if (results.length > 8) {
               var imgUrls = [];
-              for (var i = 0; i < results.length; i++) {
+              for (var i = 0; i < results.length && i < 10; i++) {
                   imgUrls.push(results[i].MediaUrl);
               }
-              getImgTags(imgUrls, results);
+              getImgTags(imgUrls, searchTerm);
           } else {
               if (index == 0) {
                   getImgData(searchTerm, getRandomInt(1, 100));
