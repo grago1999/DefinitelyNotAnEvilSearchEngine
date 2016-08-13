@@ -19,7 +19,7 @@ button img{
 }
 input{
   height:30px;
-  width:15%;
+  width:285px;
   font-size:16px;
   font-family:Raleway;
   transform: translateY(-13px);
@@ -33,4 +33,8 @@ div#suggestions{
   background-color:white;
   text-align: left;
 
+}
+
+.nav {
+  margin-left: 100px;
 }
