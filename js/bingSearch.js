@@ -51,7 +51,6 @@ function getSearchSuggestions(searchTerm) {
           var results = data[1];
           for (var i = 0; i < results.length; i++) {
               resultsHTML += "<div><h3>"+results[i]+"</h3></div>";
-              console.log(resultsHTML);
           }
           $('#suggestions').html(resultsHTML);
       },
