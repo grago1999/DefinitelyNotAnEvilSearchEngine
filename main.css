@@ -3,3 +3,7 @@
   margin-left:auto;
   margin-right:auto;
 }
+form{
+  box-sizing: border-box;
+  margin:auto;
+}
