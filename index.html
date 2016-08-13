@@ -16,10 +16,22 @@
   <div id="suggestions">
   </div>
 <script>
-  console.log($("#search").width());
+  // console.log($("#search").width());
   $("#suggestions").width($("#search").width());
-  console.log($("#suggestions").width());
-   </script>
+  // console.log($("#suggestions").width());
+</script>
+<script>
+var x= $("#search").offset();
+  // console.log(x.left);
+  $("#suggestions").offset(x);
+</script>
+<script>
+  var h= $("#search").height();
+  var sum =h;
+  h =  $("#suggestions").height();
+  sum +=h;
+  $("#suggestions").position(sum);
+</script>
 </div>
 </body>
 </html>
