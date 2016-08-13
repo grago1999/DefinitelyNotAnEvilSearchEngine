@@ -19,19 +19,12 @@ function handleResponse(response){
     var imgUrls = [];
     for (var i = 0; i < response.results.length; i++) {
         var imgResult = response.results[i].result
-        var canUseImg = true;
-        for (var j = 0; j < imgResult.tag.classes.length; j++) {
-            var currentClass = imgResult.tag.classes[j];
-            if (currentClass == currentSearchTerm) {
-              console.log(currentClass);
-                canUseImg = false;
-                break;
-            }
-        }
-        if (canUseImg) {
+        if (imgResult.tag.classes.indexOf(currentSearchTerm) == -1) {
             imgUrls.push(response.results[i].url);
         }
+        console.log(i);
     }
+    console.log('a');
     displayImgs(imgUrls);
 };
 
@@ -40,6 +33,5 @@ function handleError(err){
 };
 
 function displayImgs(imgUrls) {
-    console.log('a');
     console.log(imgUrls);
 };
