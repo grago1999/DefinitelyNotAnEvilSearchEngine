@@ -48,3 +48,11 @@ div#suggestions{
 
 
 }
+footer{
+  position:fixed;
+  bottom: 0;
+  margin-left:37%;
+  margin-right:0%;
+  font-weight:bold;
+  font-size: 24px;
+}

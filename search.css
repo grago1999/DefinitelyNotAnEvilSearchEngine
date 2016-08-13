@@ -101,8 +101,12 @@ div#suggestions{
   color: #196619;
 }
 #results{
+  margin-top:15px;
   margin:auto;
 }
 p{
+  margin:0px;
+}
+h3{
   margin:0px;
 }
