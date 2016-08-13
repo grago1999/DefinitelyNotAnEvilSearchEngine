@@ -1,5 +1,6 @@
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="search.css">
   </head>
   <body>
     <script type="text/javascript" src="js/jquery.js"></script>
@@ -13,9 +14,9 @@
       <a href=index.html>
     <img class="giggle" src="img\Gtransparent.png" style=" max-width: 100px; height: auto;">
   </a>
-      <input style="transform: translate(0px,-10px);"class="Stext" type="text" placeholder="Giggle Search" onkeyup="suggest(this)">
-      <input style="transform: translate(0px,-10px);" class="subbutton" type="button" value="Search" onclick="search()">
-
+      <input class="Stext" type="text" placeholder="Giggle Search" onkeyup="suggest(this)">
+      <button class="svg" onclick="search()"><img src="img/search.svg"</button>
+      <div id="suggestions"></div>
     </div>
     <div id="results"></div>
   </body>
