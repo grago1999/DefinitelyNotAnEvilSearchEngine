@@ -56,7 +56,6 @@ function getImgData(searchTerm, index) {
                       imgUrls.push(results[i].MediaUrl);
                   }
               }
-              console.log(imgUrls);
               getImgTags(imgUrls, searchTerm);
           } else {
               if (index == 0) {
@@ -115,4 +114,8 @@ function useSuggestion(text) {
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function reverse(s){
+    return s.split("").reverse().join("");
 }
